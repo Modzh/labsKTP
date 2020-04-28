@@ -5,8 +5,14 @@ import java.util.List;
 
 import static java.lang.Double.parseDouble;
 
-public class Lab1 {
+public class Lab2 {
 
+    /**
+     * creates three points defined by args;
+     * prints Area of triangle based o these points or
+     * prints if two of them are equal
+     * @param args
+     */
     public static void main(String[] args) {
         List<Point3d> points = createThreePoints(args);
         if (points.get(0).equals(points.get(1))

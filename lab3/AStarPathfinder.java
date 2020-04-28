@@ -45,7 +45,7 @@ public class AStarPathfinder
         {
             // Find the "best" (i.e. lowest-cost) waypoint so far.
             Waypoint best = state.getMinOpenWaypoint();
-            System.out.println(best.loc.xCoord + " " + best.loc.yCoord);
+
             // If the best location is the finish location then we're done!
             if (best.getLocation().equals(finishLoc))
             {
@@ -60,9 +60,6 @@ public class AStarPathfinder
             // Finally, move this location from the "open" list to the "closed"
             // list.
             state.closeWaypoint(best.getLocation());
-//            state.closeWaypoint(best.getLocation());
-//            takeNextStep(best, state);
-
         }
 
         return finalWaypoint;

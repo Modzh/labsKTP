@@ -46,8 +46,7 @@ public class AStarState {
     public Waypoint getMinOpenWaypoint() {
         return open.values()
                 .stream()
-                .min(Comparator.comparing(w ->
-                        w.getPreviousCost() + w.getRemainingCost()))
+                .min(Comparator.comparing(Waypoint::getTotalCost))
                 .orElse(null);
     }
 
