@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
+/**
+ * Decorator for stored %BufferedImage%
+ */
 public class JImageDisplay extends JComponent {
     private BufferedImage image;
 
@@ -28,13 +31,5 @@ public class JImageDisplay extends JComponent {
 
     public void drawPixel(int x, int y, int rgbColor) {
         image.setRGB(x, y, rgbColor);
-    }
-
-    public BufferedImage getImage() {
-        return image;
-    }
-
-    public void setImage(BufferedImage image) {
-        this.image = image;
     }
 }
